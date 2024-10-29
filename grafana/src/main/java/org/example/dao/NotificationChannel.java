@@ -8,6 +8,7 @@ public class NotificationChannel {
     public NotificationChannel() {
     }
 
+
     public void notifyUsers() {
         System.out.println("Notifiying using" + channelType.name());
     }

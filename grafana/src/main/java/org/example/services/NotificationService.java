@@ -30,4 +30,28 @@ public class NotificationService implements INotifficationService{
             channel.notifyUsers();
         }
     }
+
+    public Map<String, List<String>> getLabelToEmailMap() {
+        return labelToEmailMap;
+    }
+
+    public void setLabelToEmailMap(Map<String, List<String>> labelToEmailMap) {
+        this.labelToEmailMap = labelToEmailMap;
+    }
+
+    public Map<String, List<String>> getLabelToPhoneMap() {
+        return labelToPhoneMap;
+    }
+
+    public void setLabelToPhoneMap(Map<String, List<String>> labelToPhoneMap) {
+        this.labelToPhoneMap = labelToPhoneMap;
+    }
+
+    public Map<Integer, List<NotificationChannel>> getPriorityToChannelMap() {
+        return priorityToChannelMap;
+    }
+
+    public void setPriorityToChannelMap(Map<Integer, List<NotificationChannel>> priorityToChannelMap) {
+        this.priorityToChannelMap = priorityToChannelMap;
+    }
 }

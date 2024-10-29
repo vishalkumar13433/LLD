@@ -3,9 +3,15 @@ package org.lld.app;
 public class Splitwise {
     private static Splitwise splitwise = null;
 
-    public synchronized Splitwise getInstance() {
+    private Splitwise() {
+
+    }
+
+    public static synchronized Splitwise getInstance() {
         if (splitwise == null) {
-            splitwise = new Splitwise();
+            synchronized (Splitwise.class) {
+                splitwise = new Splitwise();
+            }
         }
         return splitwise;
     }
